@@ -19,6 +19,12 @@ public class Main {
 
         }, 5);
         printDecStrNTimes(name, (s) -> "FIO: "+s+";" , 2);
+
+        String s3 = "Что-нибудь";
+        IDecoratorStr d = (s)->{
+            return  s+"_"+s;
+        };
+        System.out.println(d.decorate(s3));
     }
 
     public static void printDecStrNTimes(String s, IDecoratorStr decorator, int n)
